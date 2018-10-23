@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Build a Blog</h1>
+
+  
+    {% for bloglist in bloglists %} 
+   
+    <a href= "./mainblog?id={{bloglist.id}}" ><h1>{{bloglist.title}}</h1></a>
+    
+    
+    <p>{{bloglist.body}}</p>
+    
+    
+    
+    <hr/>
+    {% endfor %}
+    
+
+
+{% endblock %}
+
