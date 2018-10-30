@@ -1,0 +1,35 @@
+<link rel="icon" href="data:,">
+
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Signup</h1>
+    <!--<style>div{text-align: left;}</style>-->
+
+
+
+<form action="/signup" method="POST">
+    <table>
+        <tr>
+            <td><label>Username</label></td>
+            <td>
+                <input name="username" type="text" >{{un_error}}
+            </td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td>
+                <input name="password" type="password">{{pw_error}}
+            </td>
+        </tr>
+        <tr>
+            <td><label>Verify Password</label></td>{{vp_error}}
+            <td>
+                <input name="verifypassword" type="password">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

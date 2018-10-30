@@ -2,19 +2,21 @@
 
 {% block content %}
 
-    <h1>Build a Blog</h1>
-
+<h1>blog posts!</h1>
+    
   
-    {% for bloglist in bloglists %} 
+    {% for blogpost in blogposts %} 
    
-    <a href= "./mainblog?id={{bloglist.id}}" ><h1>{{bloglist.title}}</h1></a>
-    
-    
-    <p>{{bloglist.body}}</p>
-    
-    
-    
-    <hr/>
+    <a href= "./blogpost?id={{blogpost.id}}" ><h2>{{blogpost.title}}</h2></a>
+    <p class= "content">{{blogpost.body}}</p>
+    {% for user in users %}
+    {% if blogpost.owner_id == user.id %}
+
+    <address>written by <a href = "./blogpost?user={{user.username}}">{{user.username}}</a></address>
+        <hr/>
+        
+    {% endif %}
+    {% endfor %}
     {% endfor %}
     
 

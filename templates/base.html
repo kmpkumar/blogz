@@ -1,12 +1,16 @@
 <!doctype html>
 <html>
         <head>
-                <title>Build a blog</title>
+                <title>Blogz</title>
+                <meta charset="utf-8">
                 <style>.error{color: red;}</style>
         </head>
         <body>
-                <nav> <a href = "/addblog">Add a Blog </a> | 
-                        <a href = "/mainblog">Main Blog </a>
+                <nav> <a href = "/"><b>Home</b></a> | 
+                        <a href = "/blogpost"><b>all posts</b></a>
+                          <a href = "/newpost"><b>new post</b></a>
+                            <a href = "/login" ><b>login</b></a>
+                              <a href ="/logout"><b>logout</b></a>
                 </nav>
             {% block content %}
 

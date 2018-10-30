@@ -2,7 +2,8 @@
 
 {% block content %}
 
-   <h1>{{bloglists.title}}</h1>
-   <p>{{bloglists.body}}</p>
+<h1>{{blogpost.title}}</h1>
+<p class="content">{{blogpost.body}}</p>
+<address>written by <a href ="./blogpost?user={{user.username}}">{{user.username}}</a></address>
 
 {% endblock %}
